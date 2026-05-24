@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background: #fafafa;
+  font-family: sans-serif;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  background: white;
+  min-height: 100vh;
+
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+
+  padding-bottom: 80px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .app {
+    max-width: 100%;
+    border: none;
+  }
+}
+
+/* MAIN FEED */
+
+.feed-section {
+  width: 100%;
+}
+
+/* FEED */
+
+.feed {
+  width: 100%;
+  max-width: 630px;
+
+  margin: 0 auto;
+
+  background: black;
+
+  padding-bottom: 90px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
