@@ -1,0 +1,275 @@
+/* OVERLAY */
+.cm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MODAL */
+.cm-modal {
+  position: relative;
+  display: flex;
+  width: 860px;
+  height: 560px;
+  background: #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* LEFT — image */
+.cm-image-side {
+  width: 450px;
+  
+  flex-shrink: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cm-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT — comments panel */
+.cm-right-side {
+  width: 400px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #dbdbdb;
+}
+
+/* HEADER */
+.cm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.cm-header-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cm-header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cm-header-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.cm-verified {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: #0095f6;
+  border-radius: 50%;
+  color: white;
+  font-size: 9px;
+  margin-left: 4px;
+}
+
+.cm-more-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #262626;
+  letter-spacing: 1px;
+}
+
+/* CAPTION ROW */
+.cm-caption-row {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #efefef;
+  text-align: left;
+}
+
+/* COMMENTS LIST */
+.cm-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #dbdbdb transparent;
+}
+
+.cm-list::-webkit-scrollbar {
+  width: 4px;
+}
+.cm-list::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 2px;
+}
+
+.cm-empty {
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* COMMENT ITEM */
+.cm-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cm-item-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cm-item-content {
+  flex: 1;
+}
+
+.cm-item-text {
+  font-size: 14px;
+  color: #262626;
+  line-height: 1.5;
+  margin: 0 0 4px;
+  text-align: left;
+}
+
+.cm-item-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.cm-item-time {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.cm-reply-btn {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cm-reply-btn:hover {
+  color: #262626;
+}
+
+.cm-like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ACTIONS BAR */
+.cm-actions {
+  padding: 10px 16px 6px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.cm-actions-left {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.cm-action-icon {
+  cursor: pointer;
+  color: #262626;
+}
+
+.cm-likes-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 4px;
+}
+
+.cm-post-time {
+  font-size: 11px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* INPUT ROW */
+.cm-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.cm-emoji-icon {
+  color: #262626;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cm-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #262626;
+  background: transparent;
+}
+
+.cm-input::placeholder {
+  color: #8e8e8e;
+}
+
+.cm-post-btn {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cm-post-btn:hover {
+  color: #00376b;
+}
+
+/* CLOSE BUTTON — outside modal top right */
+.cm-close-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+}

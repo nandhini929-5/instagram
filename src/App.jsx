@@ -1,32 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home"
-import ProfilePage from "./pages/ProfilePage"
-
-import BottomNav from "./components/BottomNav"
+import FeedPage from "./pages/FeedPage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
-
   return (
-
     <BrowserRouter>
-
-      <div className="app">
-
-        <Routes>
-
-          <Route path="/" element={<Home />} />
-
-          <Route path="/profile" element={<ProfilePage />} />
-
-        </Routes>
-
-        <BottomNav />
-
-      </div>
-
+      <Routes>
+        <Route path="/" element={<FeedPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

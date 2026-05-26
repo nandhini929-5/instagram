@@ -55,3 +55,9 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
+
+.feed-container{
+   width: 100%;
+   max-width: 470px;
+   margin: 0 auto;
+}

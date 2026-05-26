@@ -1,0 +1,202 @@
+/* OVERLAY */
+.share-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: overlayFadeIn 0.2s ease;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* SHEET */
+.share-sheet {
+  width: 100%;
+  max-width: 470px;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 24px;
+  animation: sheetSlideUp 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  overflow: hidden;
+}
+
+@keyframes sheetSlideUp {
+  from { transform: translateY(100%); opacity: 0.5; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* HEADER */
+.share-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+}
+
+.share-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.share-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* SEARCH */
+.share-search-wrap {
+  padding: 0 16px 14px;
+}
+
+.share-search {
+  width: 100%;
+  background: #efefef;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #262626;
+  box-sizing: border-box;
+}
+
+.share-search::placeholder {
+  color: #8e8e8e;
+}
+
+/* USERS ROW */
+.share-users-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 0 16px 14px;
+  scrollbar-width: none;
+}
+
+.share-users-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.share-user-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 72px;
+}
+
+.share-user-avatar-wrap {
+  position: relative;
+}
+
+.share-user-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.share-verified {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: #0095f6;
+  border-radius: 50%;
+  color: white;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #fff;
+}
+
+.share-user-name {
+  font-size: 11px;
+  color: #262626;
+  text-align: center;
+  max-width: 68px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.share-send-btn {
+  background: #efefef;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #262626;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.share-send-btn.sent {
+  background: #dbdbdb;
+  color: #8e8e8e;
+}
+
+/* DIVIDER */
+.share-divider {
+  height: 1px;
+  background: #efefef;
+  margin: 0 0 14px;
+}
+
+/* SHARE OPTIONS ROW */
+.share-options-scroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 0 16px;
+  scrollbar-width: none;
+}
+
+.share-options-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.share-option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 68px;
+  cursor: pointer;
+}
+
+.share-option-icon {
+  width: 52px;
+  height: 52px;
+  background: #efefef;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.share-option-item:hover .share-option-icon {
+  background: #dbdbdb;
+}
+
+.share-option-label {
+  font-size: 11px;
+  color: #262626;
+  text-align: center;
+}

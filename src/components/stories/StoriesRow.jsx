@@ -5,16 +5,16 @@ import { BsThreeDots } from "react-icons/bs"
 
 import "./StoriesRow.css"
 
-import user1 from "../assets/users/user1.jpeg"
-import user2 from "../assets/users/user2.jpeg"
-import user3 from "../assets/users/user3.jpeg"
-import user4 from "../assets/users/user4.jpeg"
-import user5 from "../assets/users/user5.jpeg"
-import user6 from "../assets/users/user6.jpeg"
-import user7 from "../assets/users/user7.jpeg"
-import user8 from "../assets/users/user8.jpeg"
-import user9 from "../assets/users/user9.jpeg"
-import user10 from "../assets/users/user10.jpeg"
+import user1 from "../../assets/users/user1.jpeg"
+import user2 from "../../assets/users/user2.jpeg"
+import user3 from "../../assets/users/user3.jpeg"
+import user4 from "../../assets/users/user4.jpeg"
+import user5 from "../../assets/users/user5.jpeg"
+import user6 from "../../assets/users/user6.jpeg"
+import user7 from "../../assets/users/user7.jpeg"
+import user8 from "../../assets/users/user8.jpeg"
+import user9 from "../../assets/users/user9.jpeg"
+import user10 from "../../assets/users/user10.jpeg"
  
 
 const stories = [
@@ -201,6 +201,7 @@ function StoriesRow() {
 
         <div className="story-fullscreen">
 
+           <div className="story-container">
           {/* TOP PROGRESS BARS */}
 
           <div className="story-progress-wrapper">
@@ -304,6 +305,7 @@ function StoriesRow() {
 
             </div>
 
+          </div>
           </div>
 
         </div>

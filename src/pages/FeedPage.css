@@ -1,0 +1,13 @@
+.feed-layout{
+   display: flex;
+   background: #fafafa;
+   min-height: 100vh;
+}
+
+.feed-container{
+   width: 100%;
+   max-width: 700px;
+
+   margin-left: 120px;
+   padding: 30px;
+}
