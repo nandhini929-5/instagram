@@ -1,69 +1,59 @@
 import React from 'react';
 
-function ProfileInfo({ user2, name, username, bio }) {
+function ProfileInfo({ user2, name, username, bio, postsCount, followersCount, followingCount }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        gap: '20px',
-        padding: '24px 20px',
-        alignItems: 'flex-start',
-        background: '#fff',
-      }}
-    >
-      {/* DP */}
+    <div style={{
+      display: 'flex',
+      gap: '40px',
+      padding: '24px 20px 20px',
+      alignItems: 'flex-start',
+      background: '#fff',
+    }}>
+
+      {/* AVATAR */}
       <img
         src={user2}
         alt="profile"
         style={{
-          width: '110px',
-          height: '110px',
+          width: '130px',
+          height: '130px',
           borderRadius: '50%',
           objectFit: 'cover',
+          flexShrink: 0,
         }}
       />
 
       {/* RIGHT SIDE */}
-      <div style={{ flex: 1, textAlign: 'left' }}>
-        
-        {/* NAME ROW */}
-        <h3 style={{ margin: '0 0 10px 0' }}>
+      <div style={{ flex: 1, paddingTop: '10px', textAlign: 'left' }}>
+
+        {/* USERNAME ROW */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+          <span style={{ fontSize: '22px', fontWeight: '600', color: '#262626' }}>{username}</span>
+          <span style={{ fontSize: '16px', color: '#262626' }}></span>
+        </div>
+
+        {/* NAME */}
+        <div style={{ fontSize: '14px', color: '#262626', marginBottom: '8px' }}>
           {name}
-        </h3>
+        </div>
 
-        {/* STATS ROW */}
-        <div
-          style={{
-            display: 'flex',
-            gap: '25px',
-            marginBottom: '10px',
-          }}
-        >
-          <div>
-            <strong>2</strong>
-            <p style={{ margin: 0, fontSize: '12px' }}>Posts</p>
-          </div>
-
-          <div>
-            <strong>148</strong>
-            <p style={{ margin: 0, fontSize: '12px' }}>Followers</p>
-          </div>
-
-          <div>
-            <strong>580</strong>
-            <p style={{ margin: 0, fontSize: '12px' }}>Following</p>
-          </div>
+        {/* STATS — inline horizontal */}
+        <div style={{ display: 'flex', gap: '20px', marginBottom: '10px' }}>
+          <span style={{ fontSize: '14px', color: '#262626' }}>
+            <b>{postsCount}</b> posts
+          </span>
+          <span style={{ fontSize: '14px', color: '#262626' }}>
+            <b>{followersCount}</b> followers
+          </span>
+          <span style={{ fontSize: '14px', color: '#262626' }}>
+            <b>{followingCount}</b> following
+          </span>
         </div>
 
         {/* BIO */}
-        <p style={{ margin: 0, fontSize: '13px' }}>
+        <div style={{ fontSize: '13px', color: '#262626', lineHeight: '1.5' }}>
           {bio}
-        </p>
-
-        {/* USERNAME small line (optional like IG) */}
-        <p style={{ margin: '6px 0 0', fontSize: '12px', color: '#555' }}>
-          @{username}
-        </p>
+        </div>
 
       </div>
     </div>

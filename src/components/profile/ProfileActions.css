@@ -1,0 +1,19 @@
+.profile-actions{
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.profile-actions button{
+  padding: 10px 275px;
+  border: none;
+  border-radius: 8px;
+  background: #efefef;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-actions button:hover{
+  background: #dbdbdb;
+}
